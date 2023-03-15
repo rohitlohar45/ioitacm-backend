@@ -15,6 +15,7 @@
     href="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.1/css/tempusdominus-bootstrap-4.min.css" />
 
   <link rel="stylesheet" href="{% static 'css/user_style.css' %}">
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
   <title>Home</title>
   <style media="screen">
     .club_box .card {
@@ -86,65 +87,32 @@
     </div>
   </div>
 
-  <section class="page_title_bg overlay">
-    <div class="container page_title_container">
-      <div class="row">
-        <div class="col-md-8">
-          <ul class="list-inline custom-breadcrumb">
-            <li class="list-inline-item"><a class="h2 page_title_name" href="#">EWU Clubs</a></li>
-            <li class="list-inline-item text-white h3 font-secondary @@nasted"></li>
-          </ul>
-          <p class="text-lighten">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-            incididunt ut labore et dolore magna aliqua.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <section class="">
     <div class="container">
       <div class="">
         <h3 class="section_title">All Clubs</h3>
-        <div class="row no-gutters">
-        <div class="col-md-4 px-2 club_box mt-3">
-          <div class="card" style="width: 100%;">
-            <img class="card-img-top" src="" alt="Card image cap"
-              style="width: 100%; height: 250px;">
-            <div class="card-body">
-              <h5 class="card-title">Web Development</h5>
-              <a href="#" class="btn btn-primary">Visit Now</a>
-            </div>
-          </div>
-        </div>
-      </div>
-        <div class="col-md-4 px-2 club_box mt-3">
-          <div class="card" style="width: 100%;">
-            <img class="card-img-top" src="" alt="Card image cap"
-              style="width: 100%; height: 250px;">
-            <div class="card-body">
-              <h5 class="card-title">Machine Learning</h5>
-              <a href="#" class="btn btn-primary">Visit Now</a>
-            </div>
-          </div>
-        </div>
-      </div>
-      </div>
+        <div class="container">
 
-      <div class="row no-gutters">
 
-        {% for club in clubs %}
-        <div class="col-md-4 px-2 club_box mt-3">
-          <div class="card" style="width: 100%;">
-            <img class="card-img-top" src="{{MEDIA_URL}}/{{club.logo.url}}" alt="Card image cap"
-              style="width: 100%; height: 250px;">
-            <div class="card-body">
-              <h5 class="card-title">{{ club.clubname }}</h5>
-              <a href="{% url 'club_single_user' club.clubname  %}" class="btn btn-primary">Visit Now</a>
-            </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row no-gutters">
+
+      {% for club in clubs %}
+      <div class="col-md-4 px-2 club_box mt-3">
+        <div class="card" style="width: 100%;">
+          <img class="card-img-top" src="{{MEDIA_URL}}/{{club.logo}}" alt="Card image cap"
+            style="width: 100%; height: 250px;">
+          <div class="card-body">
+            <h5 class="card-title">{{ club.clubname }}</h5>
+            <a href="{% url 'club_single_user' club.clubname  %}" class="btn btn-primary">Visit Now</a>
           </div>
         </div>
-        {% endfor %}
       </div>
+      {% endfor %}
+    </div>
     </div>
   </section>
 

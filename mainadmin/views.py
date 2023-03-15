@@ -62,7 +62,7 @@ def clubsingle(request,clubname):
     context={}
     if auth_fun.admin_per(request.user):
         club = Clubs.objects.get(clubname=clubname)
-        club_ec = Club_Ec.objects.filter(club=club).values('id','ec_id__username','ec_id__email','ec_id__phone_number','date_joined','club__clubname','designation')
+        club_ec = Club_Ec.objects.filter(club=club).values('id','ec_id__username','ec_id__email','date_joined','club__clubname','designation')
         context['details'] = club_ec
         context['club'] = club
         if request.POST:

@@ -80,8 +80,8 @@ def eventsingle(request,eventname):
         context['club'] = temp['club']
         club = temp['club']
         context['event'] = Events.objects.filter(eventname=eventname)[0];
-        return render(request, 'club/eventsingle.html',context)
-    else:
+        return render(request, 'club/single.html',context)
+    else: 
         return redirect('login')
 
 

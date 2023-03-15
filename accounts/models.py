@@ -49,8 +49,7 @@ class Accounts(AbstractBaseUser):
     )
     username = models.CharField(max_length = 20)
     image = models.ImageField(upload_to="accounts/")
-    phone_number = models.CharField(max_length = 15)
-    fullname = models.CharField(max_length = 50)
+    
     is_active = models.BooleanField(default=True)
     is_admin = models.BooleanField(default=False)
     is_superuser = models.BooleanField(default=False)
@@ -59,7 +58,7 @@ class Accounts(AbstractBaseUser):
     objects = AccountsManager()
 
     USERNAME_FIELD = 'email'
-    REQUIRED_FIELDS = ['username','phone_number','fullname']
+    REQUIRED_FIELDS = ['username']
 
     def __str__(self):
         return self.email
