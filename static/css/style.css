@@ -17,7 +17,8 @@ body {
 }
 
 img.h-full.w-full.object-cover.transition-transform.duration-\[1600ms\].will-change-transform.group-hover\:scale-105 {
-    height: 300px;
+    /* height: 300px; */
+    height: auto;
 }
 
 /*! tailwindcss v3.2.4 | MIT License | https://tailwindcss.com*/
@@ -526,28 +527,28 @@ select {
         max-width: 768px;
     }
 }
-.table_dosj9g__table_made_by{
+.table_dosj9g__table_made_by {
     display: none;
 }
 
 #address li:not(:first-child) {
     padding: 20px 0;
-  }
+}
 
-  #address li i {
+#address li i {
     /* font-size: 45px; */
     width: auto;
     padding: 5px;
-  }
+}
 
-  #address li div {
+#address li div {
     color: #cecece;
     font-size: 14px;
     width: 80%;
     text-align: left;
     float: right;
     line-height: 1.3;
-  }
+}
 
 .mainHome {
     margin-left: 40px;
@@ -3040,7 +3041,7 @@ input[type="search"]::-webkit-search-results-decoration {
     border-right-color: rgba(19, 23, 64, var(--tw-border-opacity));
 }
 .js-page-header--is-sticky {
-    background-color: hsla(0, 0%, 100%, 0.5);
+    background-color: rgba(19, 23, 64, 0.5);
 }
 .dark .js-page-header--is-sticky,
 .js-page-header--is-sticky.page-header--transparent {

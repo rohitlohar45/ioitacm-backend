@@ -1,3 +1,4 @@
+from django.http import HttpResponse
 from django.shortcuts import render, redirect
 from eventapp.models import Events
 from newAndNotices.models import News, Notices
@@ -7,6 +8,9 @@ from mainadmin.models import Academic_calendar
 from club.models import Clubs, Club_Ec, Gallery
 from club.forms import member_request_form
 from django.views.decorators.clickjacking import xframe_options_sameorigin
+from django.core.mail import send_mail, BadHeaderError
+from django.conf import settings
+
 # Create your views here.noticesingle.html
 
 
@@ -197,8 +201,8 @@ def home(request):
     context['news_first'] = news_first
     context['notice_first'] = notice_first
 
-    if (len(events) > 3):
-        events = events[:3]
+    if (len(events) > 4):
+        events = events[:4]
     context['events'] = events
     return render(request, 'index.html', context)
 
@@ -208,6 +212,7 @@ def event_all(request):
     context['events'] = Events.objects.all().order_by('-startdate')
     news = News.objects.all().order_by('-created_at')
     notices = Notices.objects.all().order_by('-created_at')
+    context['mainevent'] = context['events'][0]
     # try:
     #     news_first = news[0]
     # except:
@@ -218,7 +223,7 @@ def event_all(request):
     #     notice_first = False
     # context['news_first'] = news_first
     # context['notice_first'] = notice_first
-    print(context)
+    # print(context['events'][1].startdate)
     return render(request, 'event.html', context)
 
 
@@ -241,6 +246,29 @@ def profile(request):
         return render(request, 'profile.html', context)
     else:
         return redirect('login')
+
+
+def contactUs(request):
+    if request.method == 'POST':
+        form = request.POST
+        print(form)
+        if form:
+            subject = "Website Inquiry"
+            body = {
+                'first_name': form['name'],
+                'email': form['email'],
+                'message': form['message'],
+            }
+            message = "\n".join(body.values())
+            try:
+                send_mail(subject, message, settings.EMAIL_HOST_USER,
+                          ['loharrohit45@gmail.com'])
+            except BadHeaderError:
+                return HttpResponse('Invalid header found.')
+            return redirect("main:home")
+
+        # form = ContactForm()
+    return render(request, 'contact.html', {})
 
 
 def event_single(request, eventname):
