@@ -37,6 +37,11 @@ def gallery(request, clubname):
     return render(request, 'gallery.html', context)
 
 
+def page_not_found_view(request, exception):
+    # print("Page not found", request)
+    return render(request, 'notfound.html', {})
+
+
 def club_ec_user(request, clubname):
     context = {}
     news = News.objects.all().order_by('-created_at')

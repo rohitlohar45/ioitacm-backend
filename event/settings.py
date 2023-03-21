@@ -26,6 +26,7 @@ SECRET_KEY = 'e6!d6*&d&x9uw^p^dwg!th_84o2_($73pyhi9qq1xpsj0-^)(x'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
+# WHITENOISE_AUTOREFRESH = True
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
@@ -41,7 +42,7 @@ EMAIL_HOST_PASSWORD = 'vslptmtendcxugnz'
 # EMAIL_HOST_USER = 'amibest50@gmail.com'
 # EMAIL_HOST_PASSWORD = 'jugal105488jugal'
 
-ALLOWED_HOSTS = ['localhost','127.0.0.1']
+ALLOWED_HOSTS = ['localhost', '127.0.0.1']
 
 
 # Application definition
@@ -91,7 +92,6 @@ TEMPLATES = [
         },
     },
 ]
-
 
 
 AUTH_USER_MODEL = 'accounts.Accounts'
@@ -163,8 +163,7 @@ STATICFILES_DIRS = (
 )
 
 
-
 MEDIA_URL = '/media/'
-MEDIA_ROOT=os.path.join(BASE_DIR, 'media')
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 CRISPY_TEMPLATE_PACK = "bootstrap4"

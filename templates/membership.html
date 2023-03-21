@@ -37,7 +37,7 @@
   <header class="js-page-header fixed top-0 z-20 w-full  transition-colors">
     <div class="flex items-center py-2 xl:px-24">
       <!-- Logo -->
-      <a href="index.html" class="shrink-0">
+      <a href="{% url 'home' %}" class="shrink-0">
         <!-- <img src="{% static  'images/about_logo.png' %}" class=" hidden" style="width:50px; height: 50px;"
           alt="IOIT ACM" /> -->
         <img src="{% static  'images/about_logo.png' %}" class="block" style="width:100px; height: 100px;"
@@ -51,7 +51,7 @@
         <!-- Mobile Logo / Menu Close -->
         <div class="t-0 left-0 z-10 flex w-full items-center justify-between bg-white p-6 bg-jacarta-800 lg:hidden">
           <!-- Mobile Logo -->
-          <a href="index.html" class="shrink-0">
+          <a href="{% url 'home' %}" class="shrink-0">
             <img src="{% static  'images/about_logo.png' %}" class="max-h-7 hidden" style="width: 100px; height: 100px;"
               alt="IOIT ACM" />
             <img src="{% static  'images/about_logo.png' %}" class="hidden max-h-7 block" alt="IOIT ACM" />
@@ -138,13 +138,24 @@
 
   <main>
     <img src="{% static 'images/images/sss.png'%}" alt="gradient" class="h-full w-full" />
-
+    <!-- <section class="relative pt-32 pb-24">
+      <picture class="pointer-events-none absolute inset-0 -z-10">
+        <img src="{% static  'images/gradient_dark.jpg' %}" alt="gradient" class="h-full w-full" />
+      </picture>
+      <div class="container">
+        <div class="mx-auto max-w-xl text-center">
+          <p class="mb-6 text-center font-display text-5xl font-medium text-jacarta-700 dark:text-white">
+            Be a member of <br>IOIT ACM Student Chapter
+          </p>
+        </div>
+      </div>
+    </section> -->
     <!-- Intro / Statistics -->
     <section class="pb-24">
       <div class="container">
         <div class="container">
           <div class="mx-auto w-100 p-3 py-16 text-center">
-            <h1 class="mb-8 font-display text-4xl font-medium text-jacarta-700 text-white">Why Join Us? </h1>
+            <p class="mb-8 font-display text-4xl font-medium text-jacarta-700 text-white">Why Join Us? </p>
             <p class="text-lg leading-normal text-jacarta-300">
 
               ACM offers the resources, access and tools to invent the future. No one has a larger global network of
@@ -441,9 +452,11 @@
                         <span class="text-lg font-medium leading-tight tracking-tight text-green"><b>Linktree: </b>
                         </span>
                       </div>
-                      <span class="text-xl text-jacarta-400 text-jacarta-300">
-                        linktr.ee/ioitacm
-                      </span>
+                      <a href="https://linktr.ee/ioitacm" target="_blank">
+                        <span class="text-xl text-jacarta-400 text-jacarta-300">
+                          linktr.ee/ioitacm
+                        </span>
+                      </a>
                     </div>
                   </div>
                   <style>
@@ -657,7 +670,7 @@
       }
     </style>
     <!-- Story -->
-    <section class="relative py-24 bg-jacarta-800">
+    <!-- <section class="relative py-24 bg-jacarta-800">
       <div class="container">
         <h1 class="mb-12 text-center font-display text-3xl text-jacarta-700 text-white">
           Our Sponsors
@@ -671,7 +684,7 @@
         </div>
       </div>
 
-    </section>
+    </section> -->
     <hr>
     <section class="relative me-4 py-5 bg-jacarta-800">
       <h1 class="mb-1 text-center font-display text-3xl text-jacarta-700 text-white">

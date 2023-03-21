@@ -82,7 +82,7 @@
   <header class="js-page-header fixed top-0 z-20 w-full  transition-colors">
     <div class="flex items-center py-2 xl:px-24">
       <!-- Logo -->
-      <a href="index.html" class="shrink-0">
+      <a href="{% url 'home' %}" class="shrink-0">
         <!-- <img src="{% static  'images/about_logo.png' %}" class=" hidden" style="width:50px; height: 50px;"
           alt="IOIT ACM" /> -->
         <img src="{% static  'images/about_logo.png' %}" class="block" style="width:100px; height: 100px;"
@@ -96,7 +96,7 @@
         <!-- Mobile Logo / Menu Close -->
         <div class="t-0 left-0 z-10 flex w-full items-center justify-between bg-white p-6 bg-jacarta-800 lg:hidden">
           <!-- Mobile Logo -->
-          <a href="index.html" class="shrink-0">
+          <a href="{% url 'home' %}" class="shrink-0">
             <img src="{% static  'images/about_logo.png' %}" class="max-h-7 hidden" style="width: 100px; height: 100px;"
               alt="IOIT ACM" />
             <img src="{% static  'images/about_logo.png' %}" class="hidden max-h-7 block" alt="IOIT ACM" />
@@ -203,8 +203,9 @@
                   <h3 class="title">Omkar Danave</h3>
                   <span class="post">Chair</span>
                   <ul class="social-links">
-                                        <a href="#" class="glowing-button" style="vertical-align:middle">Socials</a>
-
+                    <a href="{% url 'contactus' %}"
+                      target="_blank" class="inline-block rounded-full bg-accent py-2 px-6 text-center font-semibold text-white shadow-accent-volume transition-all hover:bg-accent-dark">
+                      Socials</a>
                   </ul>
                 </div>
               </div>
@@ -219,7 +220,9 @@
                   <h3 class="title">Dr. Meenakshi Thalor</h3>
                   <span class="post">Faculty Sponsor</span>
                   <ul class="social-links">
-                    <a href="#" class="glowing-button" style="vertical-align:middle">Socials</a>
+                    <a href="{% url 'contactus' %}" target="_blank"
+                      class="inline-block rounded-full bg-accent py-2 px-6 text-center font-semibold text-white shadow-accent-volume transition-all hover:bg-accent-dark">
+                      Socials</a>
                   </ul>
                 </div>
               </div>
@@ -234,8 +237,9 @@
                   <h3 class="title">Omkar Danave</h3>
                   <span class="post">Chair</span>
                   <ul class="social-links">
-                                        <a href="#" class="glowing-button" style="vertical-align:middle">Socials</a>
-
+                    <a href="{% url 'contactus' %}"
+                      target="_blank" class="inline-block rounded-full bg-accent py-2 px-6 text-center font-semibold text-white shadow-accent-volume transition-all hover:bg-accent-dark">
+                      Socials</a>
                   </ul>
                 </div>
               </div>
@@ -250,8 +254,9 @@
                   <h3 class="title">Omkar Danave</h3>
                   <span class="post">Chair</span>
                   <ul class="social-links">
-                    <a href="#" class="glowing-button" style="vertical-align:middle">Socials</a>
-
+                    <a href="{% url 'contactus' %}" target="_blank"
+                      class="inline-block rounded-full bg-accent py-2 px-6 text-center font-semibold text-white shadow-accent-volume transition-all hover:bg-accent-dark">
+                      Socials</a>
                   </ul>
                 </div>
               </div>
@@ -266,8 +271,9 @@
                   <h3 class="title">Anshika Singh</h3>
                   <span class="post">Vice-Chair</span>
                   <ul class="social-links">
-                    <a href="#" class="glowing-button" style="vertical-align:middle">Socials</a>
-
+                    <a href="https://linktr.ee/AnshikaSingh10" target="_blank"
+                      class="inline-block rounded-full bg-accent py-2 px-6 text-center font-semibold text-white shadow-accent-volume transition-all hover:bg-accent-dark">
+                      Socials</a>
                   </ul>
                 </div>
               </div>
@@ -282,8 +288,9 @@
                   <h3 class="title">Sharvin Shah</h3>
                   <span class="post">Secretary</span>
                   <ul class="social-links">
-                    <a href="#" class="glowing-button" style="vertical-align:middle">Socials</a>
-
+                    <a href="https://linktr.ee/_sharvin7" target="_blank"
+                      class="inline-block rounded-full bg-accent py-2 px-6 text-center font-semibold text-white shadow-accent-volume transition-all hover:bg-accent-dark">
+                      Socials</a>
                   </ul>
                 </div>
               </div>
@@ -298,8 +305,9 @@
                   <h3 class="title">Yash Yegare</h3>
                   <span class="post">Treasurer</span>
                   <ul class="social-links">
-                    <a href="#" class="glowing-button" style="vertical-align:middle">Socials</a>
-
+                    <a href="{% url 'contactus' %}" target="_blank"
+                      class="inline-block rounded-full bg-accent py-2 px-6 text-center font-semibold text-white shadow-accent-volume transition-all hover:bg-accent-dark">
+                      Socials</a>
                   </ul>
                 </div>
               </div>
@@ -314,8 +322,9 @@
                   <h3 class="title">Aval Sonigara</h3>
                   <span class="post">Administrator</span>
                   <ul class="social-links">
-                    <a href="#" class="glowing-button" style="vertical-align:middle">Socials</a>
-
+                    <a href="https://linktr.ee/avalsonigara15" target="_blank"
+                      class="inline-block rounded-full bg-accent py-2 px-6 text-center font-semibold text-white shadow-accent-volume transition-all hover:bg-accent-dark">
+                      Socials</a>
                   </ul>
                 </div>
               </div>
@@ -330,8 +339,9 @@
                   <h3 class="title">Rohit Lohar</h3>
                   <span class="post">WebMaster</span>
                   <ul class="social-links">
-                    <a href="#" class="glowing-button" style="vertical-align:middle">Socials</a>
-
+                    <a href="https://linktr.ee/loharrohit" target="_blank"
+                      class="inline-block rounded-full bg-accent py-2 px-6 text-center font-semibold text-white shadow-accent-volume transition-all hover:bg-accent-dark">
+                      Socials</a>
                   </ul>
                 </div>
               </div>
@@ -346,8 +356,9 @@
                   <h3 class="title">Anurag Gargote</h3>
                   <span class="post">Technical Head</span>
                   <ul class="social-links">
-                    <a href="#" class="glowing-button" style="vertical-align:middle">Socials</a>
-
+                    <a href="https://linktr.ee/Anurag19" target="_blank"
+                      class="inline-block rounded-full bg-accent py-2 px-6 text-center font-semibold text-white shadow-accent-volume transition-all hover:bg-accent-dark">
+                      Socials</a>
                   </ul>
                 </div>
               </div>
@@ -362,8 +373,9 @@
                   <h3 class="title">Akshita Ghanwat</h3>
                   <span class="post">Documentation Head</span>
                   <ul class="social-links">
-                    <a href="#" class="glowing-button" style="vertical-align:middle">Socials</a>
-
+                    <a href="https://linktr.ee/akshitasg" target="_blank"
+                      class="inline-block rounded-full bg-accent py-2 px-6 text-center font-semibold text-white shadow-accent-volume transition-all hover:bg-accent-dark">
+                      Socials</a>
                   </ul>
                 </div>
               </div>
@@ -378,8 +390,9 @@
                   <h3 class="title">Lalita Bari</h3>
                   <span class="post">Coordinator Head</span>
                   <ul class="social-links">
-                    <a href="#" class="glowing-button" style="vertical-align:middle">Socials</a>
-
+                    <a href="https://linktr.ee/lalitabari" target="_blank"
+                      class="inline-block rounded-full bg-accent py-2 px-6 text-center font-semibold text-white shadow-accent-volume transition-all hover:bg-accent-dark">
+                      Socials</a>
                   </ul>
                 </div>
               </div>
@@ -394,8 +407,9 @@
                   <h3 class="title">Omkar Danave</h3>
                   <span class="post">Chair</span>
                   <ul class="social-links">
-                                        <a href="#" class="glowing-button" style="vertical-align:middle">Socials</a>
-
+                    <a href="{% url 'contactus' %}"
+                      target="_blank" class="inline-block rounded-full bg-accent py-2 px-6 text-center font-semibold text-white shadow-accent-volume transition-all hover:bg-accent-dark">
+                      Socials</a>
                   </ul>
                 </div>
               </div>

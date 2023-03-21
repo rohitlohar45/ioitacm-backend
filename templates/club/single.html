@@ -33,7 +33,7 @@
   <header class="js-page-header fixed top-0 z-20 w-full backdrop-blur transition-colors">
     <div class="flex items-center py-2 xl:px-24">
       <!-- Logo -->
-      <a href="index.html" class="shrink-0">
+      <a href="{% url 'home' %}" class="shrink-0">
         <img src="{% static  'images/about_logo.png' %}" class=" dark:hidden" style="width:50px; height: 50px;"
           alt="IOIT ACM" />
         <img src="{% static  'images/about_logo.png' %}" class="hidden dark:block" style="width:100px; height: 100px;"
@@ -48,7 +48,7 @@
         <div
           class="t-0 left-0 z-10 flex w-full items-center justify-between bg-white p-6 dark:bg-jacarta-800 lg:hidden">
           <!-- Mobile Logo -->
-          <a href="index.html" class="shrink-0">
+          <a href="{% url 'home' %}" class="shrink-0">
             <img src="{% static  'images/about_logo.png' %}" class="max-h-7 dark:hidden"
               style="width: 100px; height: 100px;" alt="IOIT ACM" />
             <img src="{% static  'images/about_logo.png' %}" class="hidden max-h-7 dark:block" alt="IOIT ACM" />
